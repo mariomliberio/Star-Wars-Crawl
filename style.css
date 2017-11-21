@@ -5,11 +5,29 @@ font-weight: bold;
 color: yellow;
 }
 
-p{
+.one{
+	/* cosmétique */
+    font-size: 32px;
+    color: #4bd5ee;
+		text-align: center;
+		justify-content: center;
+    /* Animation: Apparition et disparition progressive */
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: one;
+    animation-timing-function: ease-out;
 
 }
 
-#titles {
+@keyframes one {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.titles {
 position: absolute;
 width: 18em;
 height: 50em;
@@ -22,10 +40,17 @@ text-align: justify;
 overflow: hidden;
 transform-origin: 50% 100%;
 transform: perspective(300px) rotateX(25deg);
-color: #white;
+color: #lightcyan;
+
 
 }
-#titles:after{
+#firstit{
+color: lightcyan;
+position: fixed;
+text-align: center;
+font-family: Arial monospace;
+}
+.titles:after{
 position: absolute;
 content: ' ';
 left: 0;
@@ -37,7 +62,7 @@ pointer-events: none;
 color: #white;
 
 }
-#titlecontent
+.titlecontent
 {
 	position: absolute;
 	top: 100%;
